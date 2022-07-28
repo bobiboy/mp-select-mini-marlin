@@ -29,6 +29,7 @@ jobs:
 #            libs: TMCStepper
 #            outdir: image/
       - name: Bump version and push tag
+        id: gettag
         uses: anothrNick/github-tag-action@1.36.0
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,4 +38,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ./output/Marlin.ino.hex
-          tag_name: ${{ env.NEW_TAG }}
+          tag_name: ${{ steps.gettag.outputs.new_tag }}
