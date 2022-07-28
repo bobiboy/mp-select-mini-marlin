@@ -26,9 +26,8 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Arduino builder
-        # You may pin to the exact commit or the version.
-        # uses: dark0ghost/arduino_action@1e567e3f2dd571a93b01822eff17345e43511da1
-        uses: dark0ghost/arduino_action@v1.1
+        uses: bobiboy/marlin-mp-select-mini-build-script@latest
         with:
           # file compile
           file: Marlin/Marlin.ino
+          libs: TMCStepper
