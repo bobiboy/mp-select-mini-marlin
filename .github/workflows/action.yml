@@ -1,0 +1,21 @@
+ name: "Arduino builder"
+ description: "Build your arduino files"
+ author: "dark0ghost"
+ inputs:
+   file:
+     description: "file compile"
+     required: true
+   link:
+       description: "link to sketch"
+       required: false
+       default: "https://arduino.esp8266.com/stable/package_esp8266com_index.json"
+   libs:
+       description: "libs to include"
+       required: false
+       default: ""
+ runs:
+   using: 'docker'
+   image: 'Dockerfile'
+  # args:
+   #  - ${{ inputs.file }}
+    # - ${{ inputs.link }}
