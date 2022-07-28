@@ -28,12 +28,13 @@ jobs:
             file: Marlin/Marlin.ino
             libs: TMCStepper
             outdir: image/
-      - name: Generate release tag
-        uses: amitsingh-007/next-release-tag@v1.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.36.0
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            WITH_V: true
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: ./output/Marlin.ino.hex
-          tag_name: $NEXT_RELEASE_VERSION 
+          tag_name: $NEW_TAG 
