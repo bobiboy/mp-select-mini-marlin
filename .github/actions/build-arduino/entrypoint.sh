@@ -14,7 +14,7 @@ then
 else
   exit 1
 fi
-
+done
 
 for i in $INPUT_FILE ; do
   arduino-cli compile -b arduino:avr:uno $i --verbose
