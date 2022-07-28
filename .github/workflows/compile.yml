@@ -24,10 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      - name: Arduino builder
-        uses: ./.github/workflows/action.yml
+      - uses: .github/workflows/action.yml
         with:
-          # file compile
           file: Marlin/Marlin.ino
           libs: TMCStepper

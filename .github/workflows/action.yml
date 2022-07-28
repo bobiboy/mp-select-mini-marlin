@@ -1,6 +1,8 @@
  name: "Arduino builder"
  description: "Build your arduino files"
  author: "dark0ghost"
+ on:
+  workflow_call:
  inputs:
    file:
      description: "file compile"
