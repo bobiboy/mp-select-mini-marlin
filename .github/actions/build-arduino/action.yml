@@ -14,7 +14,7 @@
        description: "Libs to include"
        required: false
        default: ""
-  outdir:
+   outdir:
        description: "The output directory"
        required: false
        default: ""
