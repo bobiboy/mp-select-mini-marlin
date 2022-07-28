@@ -6,7 +6,7 @@ cd $GITHUB_WORKSPACE
 
 arduino-cli core install arduino:avr
 
-for l in $LIBS ; do
+for l in $INPUT_LIBS ; do
   arduino-cli lib install $l --verbose
   if [ $? -eq 0 ]
 then
