@@ -31,4 +31,4 @@ jobs:
         uses: dark0ghost/arduino_action@v1.1
         with:
           # file compile
-          file: main/main.io
+          file: Marlin/Marlin.ino
