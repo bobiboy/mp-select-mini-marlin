@@ -11,7 +11,11 @@
        required: false
        default: "https://arduino.esp8266.com/stable/package_esp8266com_index.json"
    libs:
-       description: "libs to include"
+       description: "Libs to include"
+       required: false
+       default: ""
+  outdir:
+       description: "The output directory"
        required: false
        default: ""
  runs:

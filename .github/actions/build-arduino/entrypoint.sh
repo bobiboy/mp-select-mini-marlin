@@ -17,7 +17,7 @@ fi
 done
 
 for i in $INPUT_FILE ; do
-  arduino-cli compile -b arduino:avr:uno $i --verbose
+  arduino-cli compile -b arduino:avr:uno $i --verbose --output-dir $INPUT_OUTDIR
   if [ $? -eq 0 ]
 then
   echo "Successfully compile $i"
