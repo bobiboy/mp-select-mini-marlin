@@ -14,10 +14,6 @@
        description: "Libs to include"
        required: false
        default: ""
-   outdir:
-       description: "The output directory"
-       required: false
-       default: ""
  runs:
    using: 'docker'
    image: 'Dockerfile'

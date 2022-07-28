@@ -22,9 +22,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - uses: ./.github/actions/build-arduino
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build Arduino Image
+        uses: ./.github/actions/build-arduino
         with:
             file: Marlin/Marlin.ino
             libs: TMCStepper
             outdir: image/
+      - name: Store image
+        uses: actions/upload-artifact@v3
+        with:
+          name: Marlin
+          path: ./output/Marlin.ino.hex
