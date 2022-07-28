@@ -37,4 +37,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ./output/Marlin.ino.hex
-          tag_name: $NEW_TAG 
+          tag_name: ${{ env.NEW_TAG }}
