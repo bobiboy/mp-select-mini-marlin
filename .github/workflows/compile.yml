@@ -30,8 +30,7 @@ jobs:
             file: Marlin/Marlin.ino
             libs: TMCStepper
             outdir: image/
-      - name: Store image
-        uses: actions/upload-artifact@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: Marlin
-          path: ./output/Marlin.ino.hex
+          files: ./output/Marlin.ino.hex
